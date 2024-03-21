@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <body>
+        <div>
+            <img src="{% static 'media/cats_with_fire.jpg' %}"
+                        alt="Picture of two cats next to a fire" />
+            <h1>All the cats are:</h1>
+        </div>
+
+        <div>
+            <ul>
+                {% for cat in cats %}
+                    <li>{{ cat.name }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div>
+            <!-- this needs changed so just home is linekd not the whole sentence -->
+            <p><a href="/pets_for_students/">Click to go back to Home</a></p> 
+        </div>
+    </body>
+</html>

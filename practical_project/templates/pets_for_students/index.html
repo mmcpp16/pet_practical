@@ -1,0 +1,54 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>School News</title>
+    <style>
+        body{background-color: yellow;}
+        h1 {text-align: center;}
+        .article-info{font-style: italic;}
+    </style>
+</head>
+<body>
+    <h1>School News</h1>
+    {% for article in articles %}
+        <h2>{{ article.title }}</h2>
+        <p class="article-info"><strong>by {{ article.author }}. {{ article.date }}</strong></p>
+        <p>{{ article.description }}</p>
+    {% endfor %}
+</body>
+</html> -->
+
+<!DOCTYPE html>
+{%load staticfiles %}
+<html>
+<!-- <head>
+    <title>Students and their cats</title>
+</head> -->
+    <body>
+        <div>
+            <img src="{% static 'media/cat.png' %}"
+                alt="Picture of a cat" />
+            <h1>The Students and their cats are:</h1>
+        </div>
+
+        <div>
+        <ul>
+            {% for student in students %}
+                <li>{{ student.first_name }} {{ student.last_name }} has <strong>{{ student.cat_num }}</strong>
+                    {% if student.cat_num == 1 %}cat{% else %}cats{% endif %}</li>
+                {% if student.cat_set.all %}
+                    <ul>
+                        {% for cat in student.cat_set.all %}
+                            <li>{{ cat.name }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        </div>
+
+        <div>
+        <p><a href="/pets_for_students/pets/">About Pets of Students</a></p>
+        </div>
+    </body>
+</html>
