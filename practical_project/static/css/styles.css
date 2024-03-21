@@ -1,0 +1,47 @@
+/* styles.css */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff9e6;
+    margin: 0;
+    padding: 20px; 
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+h1 {
+    color: #ffa500;
+}
+
+ul {
+    padding: 10px 0; 
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+ul ul {
+    padding-left: 20px; 
+}
+
+a {
+    color: #ffa500;
+}
+
+
+.image-frame {
+    border: 6px solid #ffa500; 
+    padding: 15px; 
+    display: inline-block; 
+    background-color: #ffd700; 
+    max-width: fit-content; 
+}
+
+.orange-number {
+    color: #ffa500; 
+}

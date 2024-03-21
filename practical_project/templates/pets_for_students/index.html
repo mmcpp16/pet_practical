@@ -21,20 +21,23 @@
 <!DOCTYPE html>
 {%load staticfiles %}
 <html>
-<!-- <head>
-    <title>Students and their cats</title>
-</head> -->
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    </head>
     <body>
-        <div>
+        <div class="image-frame">
             <img src="{% static 'media/cat.png' %}"
                 alt="Picture of a cat" />
+        </div>
+
+        <div>
             <h1>The Students and their cats are:</h1>
         </div>
 
         <div>
         <ul>
             {% for student in students %}
-                <li>{{ student.first_name }} {{ student.last_name }} has <strong>{{ student.cat_num }}</strong>
+                <li>{{ student.first_name }} {{ student.last_name }} has <strong class="orange-number">{{ student.cat_num }}</strong>
                     {% if student.cat_num == 1 %}cat{% else %}cats{% endif %}</li>
                 {% if student.cat_set.all %}
                     <ul>
